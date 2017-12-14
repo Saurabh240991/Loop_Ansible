@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+
+  vars:
+    topvars:
+      - name: foo
+        gid: 1111
+      - name: bar
+        gid: 9111
+
+  tasks:
+    - include: b.yml
+      with_items: "{{topvars}}"
+      loop_control:
+        loop_var: topvar
