@@ -1,0 +1,2 @@
+---
+- debug: msg="{{topvar.name}} from bottom"
